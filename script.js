@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection){
 
     // Player picks same item as Computer
     if (playerSelection.toLowerCase() === computerSelection){
-        console.log(`It's a tie!! ${playerSelection} equals ${computerSelection}`);
+        console.log(`No winner!! ${playerSelection} equals ${computerSelection}`);
         return null;
     }
 }
@@ -62,12 +62,12 @@ function game(numberOfRounds = 5){
 
     // Output final results
     if(playerScore > computerScore){
-        console.log(`You Win!!! (${playerScore} vs ${computerScore})`);
+        console.log(`YOU WIN!!! (${playerScore} vs ${computerScore})`);
     }else if(playerScore < computerScore) {
-        console.log(`You Loose! (${playerScore} vs ${computerScore})`);
+        console.log(`YOU LOOSE! (${playerScore} vs ${computerScore})`);
     }else {
-        console.log(`Nobody wins! (${playerScore} vs ${computerScore})`);
+        console.log(`IT'S A TIE!! (${playerScore} vs ${computerScore})`);
     }
 }
 
-game(3);
+game(1);
