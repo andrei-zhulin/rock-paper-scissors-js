@@ -49,7 +49,7 @@ function game(numberOfRounds = 5){
     let computerScore = 0;
 
     for (let i = 0; i < numberOfRounds; i++){
-        let playerChoice = prompt(`Rock, Scissors or Paper? (attempt ${i+1}/${numberOfRounds})`);
+        let playerChoice = prompt(`Rock, Scissors or Paper? (round ${i+1}/${numberOfRounds})`);
 
         let roundResult = playRound(playerChoice, computerPlay());
 
