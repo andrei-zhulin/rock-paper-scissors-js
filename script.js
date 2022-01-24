@@ -70,4 +70,4 @@ function game(numberOfRounds = 5){
     }
 }
 
-game(1);
+game(3);
