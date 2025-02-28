@@ -5,18 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
     <div id="container">
-      <div class="buttons-row">
-        <button class="rps-sel-btn">Rock</button>
-        <button class="rps-sel-btn">Paper</button>
-        <button class="rps-sel-btn">Scissors</button>
+      <div class="game-header">
+        <h1>Rock Paper Scissors</h1>
+        <button id="sound-toggle" class="sound-on">
+          <i class="fas fa-volume-up"></i>
+        </button>
       </div>
-      <div id="results"></div>
-      <div id="final-result"></div>
-      <div id="score"></div>
+      
+      <div class="scoreboard">
+        <div class="score-container">
+          <div class="score-label">SCORE</div>
+          <div id="score"></div>
+        </div>
+      </div>
+      
+      <div id="battle-arena">
+        <div class="arena-background"></div>
+        
+        <div id="battle-container">
+          <div class="player-choice">
+            <div class="choice-icon player"></div>
+            <div class="player-label">You</div>
+          </div>
+          <div class="vs-container">
+            <div class="vs-text">VS</div>
+            <div class="battle-flames"></div>
+          </div>
+          <div class="computer-choice">
+            <div class="choice-icon computer"></div>
+            <div class="computer-label">Computer</div>
+          </div>
+        </div>
+        
+        <div id="results"></div>
+        <div id="final-result"></div>
+      </div>
+      
+      <div class="controls-section">
+        <div class="controls-title">Choose Your Weapon</div>
+        <div class="buttons-row">
+          <button class="rps-sel-btn" data-choice="Rock">
+            <i class="fas fa-hand-rock"></i> Rock
+          </button>
+          <button class="rps-sel-btn" data-choice="Paper">
+            <i class="fas fa-hand-paper"></i> Paper
+          </button>
+          <button class="rps-sel-btn" data-choice="Scissors">
+            <i class="fas fa-hand-scissors"></i> Scissors
+          </button>
+        </div>
+      </div>
+      
+      <!-- Audio elements -->
+      <audio id="sound-select" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
+      <audio id="sound-thinking" src="https://assets.mixkit.co/active_storage/sfx/209/209-preview.mp3" preload="auto"></audio>
+      <audio id="sound-battle" src="https://assets.mixkit.co/active_storage/sfx/235/235-preview.mp3" preload="auto"></audio>
+      <audio id="sound-win" src="https://assets.mixkit.co/active_storage/sfx/270/270-preview.mp3" preload="auto"></audio>
+      <audio id="sound-lose" src="https://assets.mixkit.co/active_storage/sfx/2/2-preview.mp3" preload="auto"></audio>
+      <audio id="sound-tie" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" preload="auto"></audio>
+      <audio id="sound-game-win" src="https://assets.mixkit.co/active_storage/sfx/583/583-preview.mp3" preload="auto"></audio>
+      <audio id="sound-game-lose" src="https://assets.mixkit.co/active_storage/sfx/132/132-preview.mp3" preload="auto"></audio>
+      
       <script src="script.js"></script>
     </div>
   </body>
